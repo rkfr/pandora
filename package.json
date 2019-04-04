@@ -30,10 +30,10 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.2.0",
-    "@babel/preset-env": "^7.2.0",
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
     "autoprefixer": "^9.5.0",
-    "babel-loader": "^8.0.4",
+    "babel-loader": "^8.0.5",
     "copy-webpack-plugin": "^4.6.0",
     "css-loader": "^2.1.1",
     "css-mqpacker": "^7.0.0",

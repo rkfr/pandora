@@ -1,6 +1,18 @@
 @import "utils/libs";
-// @import "utils/vars";
-// @import "utils/mixins";
-// @import "utils/fonts";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/fonts";
 
-// @import "modules/footer";
+// markup
+@import "modules/specs";
+@import "modules/header";
+@import "modules/signaling";
+@import "modules/complex-solutions";
+@import "modules/immobilizer";
+@import "modules/remote-alarm";
+@import "modules/micro-alarm";
+@import "modules/gsm-alarm";
+@import "modules/certificates";
+@import "modules/our-works";
+@import "modules/how-to-find";
+@import "modules/footer";

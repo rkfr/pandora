@@ -28,6 +28,13 @@ module.exports = {
       loader: 'babel-loader',
       exclude: '/node_modules/'
     }, {
+      test: /\.(eot|ttf|woff|woff2)$/,
+      loader: 'file-loader',
+      options: {
+        name: 'assets/fonts/[name].[ext]'
+      }
+    },
+     {
       test: /\.(png|jpg|gif|svg)$/,
       loader: 'file-loader',
       options: {
