@@ -51,6 +51,7 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
+    "imagemin-webpack-plugin": "^2.4.2",
     "normalize.css": "^8.0.1",
     "normalize.min.css": "^8.0.0"
   }
