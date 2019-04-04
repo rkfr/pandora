@@ -1,13 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Pandora</title>
 </head>
 <body>
-  <header class="header"></header>
+  <header class="header">
+    <div class="container">
+      <nav class="header__nav d-flex">
+        <a href="tel:88126086368" class="header__tel">8 (812) 608-63-68</a>
+        <p class="header__time">С 10:00 до 21:00</p>
+        <p class="header__address">Адрес: Шоссе революции, д. 69</p>
+      </nav>
+      <div class="header__wrapp d-flex">
+        <div class="header__info">
+          <p class="header__subtitle">
+              Официальный установочный центр
+          </p>
+          <img src="assets/img/logo.png" alt="Логотип" class="header__logo">
+          <div class="header__texts">
+            <p class="header__text">
+              Сохраняем гарантии дилера авто
+            </p>
+            <p class="header__text">
+              Полная поддержка и постобслуживание
+            </p>
+            <p class="header__text">
+              Работаем без посредников
+            </p>
+            <p class="header__text">
+              Гарантия на установку и оборудования 3 года
+            </p>
+          </div>
+        </div>
+        <form action="#" class="form-header d-flex js-form">
+          <p class="form-header__title">
+            Оставить заявку
+          </p>
+          <input type="text" class="form-header__input" placeholder="Ваше имя">
+          <input type="tel" class="form-header__input" placeholder="+7 (...)...-..-..">
+          <button class="form-header__btn">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </header>
   <section class="signaling"></section>
   <section class="complex-solutions"></section>
   <section class="immobilizer"></section>
