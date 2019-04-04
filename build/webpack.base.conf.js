@@ -15,7 +15,7 @@ module.exports = {
     paths: PATHS
   },
   entry: {
-    app: PATHS.src
+    main: PATHS.src
   },
   output: {
     filename: `${PATHS.assets}js/[name].js`,
