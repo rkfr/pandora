@@ -1,0 +1,54 @@
+.signaling {
+    padding-top: 200px;
+    &__title {
+        text-align: center;
+    }
+    &__cards {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__card {
+        width: 26%;
+        margin-top: 88px;
+        font-size: rem(36);
+        text-align: center;
+    }
+    &__name {
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        &::before {
+            content: '';
+            display: block;
+            width: 121px;
+            height: 101px;
+            margin: 0 auto 35px;
+        }
+        &_lock::before {
+            background: url('../img/icon1.png') no-repeat center center;
+            background-size: cover;
+        }
+        &_search::before {
+            background: url('../img/icon2.png') no-repeat center center;
+            background-size: cover;
+        }
+        &_immo::before {
+            background: url('../img/icon3.png') no-repeat center center;
+            background-size: cover;
+        }
+        &_slave::before {
+            background: url('../img/icon4.png') no-repeat center center;
+            background-size: cover;
+        }
+        &_gsm::before {
+            background: url('../img/icon5.png') no-repeat center center;
+            background-size: cover;
+        }
+        &_automatic::before {
+            background: url('../img/icon6.png') no-repeat center center;
+            background-size: cover;
+        }
+    }
+    &__btn {
+        margin: 50px auto 0;
+    }
+}

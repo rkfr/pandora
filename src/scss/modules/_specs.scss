@@ -7,7 +7,7 @@ body {
 	margin: 0;
 	letter-spacing: 0.06em;
 	color: $main-text-color;
-	background: url(/body-bg.jpg) repeat-y center top -2508px;
+	background: url(../img/body-bg.jpg) repeat-y center top -2508px;
 	background-size: 100%;
 	font-family: $myriad-regular;
 }
@@ -49,6 +49,7 @@ h1 {
 
 h2 {
 	font-size: rem(82);
+	text-transform: uppercase;
 }
 
 h3 {
@@ -88,4 +89,17 @@ button:active {
 .container {
 	width: $containerXXL;
 	margin: 0 auto;
+}
+
+.modal-btn {
+	display: block;
+	border: none;
+	background: $button-color;
+	color: $main-text-color;
+	text-transform: uppercase;
+	font-size: rem(40);
+	padding: 30px 40px 27px;
+	text-align: center;
+	border-radius: 20px;
+	cursor: pointer;
 }
