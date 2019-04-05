@@ -151,40 +151,40 @@ class HtmlSlider {
     }
 }
 
-const immobilizer = document.getElementById('immobilizer-slider'),
-    imbSlider = new HtmlSlider(immobilizer, {
-        slidesToShow:  4,
-        media: {
-            lg: {
-                point: 1200,
-                value: 3
-            },
-            md: {
-                point: 890,
-                value: 2
-            },
-            sm: {
-                point: 560,
-                value: 1
-            }
-        }
-    });
+// const immobilizer = document.getElementById('immobilizer-slider'),
+//     imbSlider = new HtmlSlider(immobilizer, {
+//         slidesToShow:  4,
+//         media: {
+//             lg: {
+//                 point: 1200,
+//                 value: 3
+//             },
+//             md: {
+//                 point: 890,
+//                 value: 2
+//             },
+//             sm: {
+//                 point: 560,
+//                 value: 1
+//             }
+//         }
+//     });
 
-const remoteAlarm = document.getElementById('remote-alarm-slider'),
-    remAlrmSlider = new HtmlSlider(remoteAlarm, {
-        slidesToShow:  4,
-        media: {
-            lg: {
-                point: 1200,
-                value: 3
-            },
-            md: {
-                point: 890,
-                value: 2
-            },
-            sm: {
-                point: 560,
-                value: 1
-            }
-        }
-    });
+// const remoteAlarm = document.getElementById('remote-alarm-slider'),
+//     remAlrmSlider = new HtmlSlider(remoteAlarm, {
+//         slidesToShow:  4,
+//         media: {
+//             lg: {
+//                 point: 1200,
+//                 value: 3
+//             },
+//             md: {
+//                 point: 890,
+//                 value: 2
+//             },
+//             sm: {
+//                 point: 560,
+//                 value: 1
+//             }
+//         }
+//     });
