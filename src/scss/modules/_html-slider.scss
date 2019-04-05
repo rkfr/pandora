@@ -1,0 +1,68 @@
+.html-slider__container {
+    position: relative;
+    overflow: hidden;
+    margin: 0 10%;
+    height: 20vw;
+}
+
+.html-slider {
+    position: absolute;
+    transition: .7s ease;
+    left: 0;
+
+    &__general-button {
+        &_left {}
+        &_right {}
+    }
+
+    &__card {
+        color: $main-text-color;
+        position: absolute;
+        
+        &:hover .html-slider__button {
+            opacity: 1;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        &_left-button {
+            position: absolute;
+            left: 5%;
+            top: 40%;
+            z-index: 1;
+        }
+
+        &_right-button {
+            position: absolute;
+            right: 5%;
+            top: 40%;
+            z-index: 1;
+        }
+    }
+
+    &__image {
+        display: block;
+        object-fit: cover;
+        @include size(50%, 100%);
+    }
+
+    &__text {
+
+    }
+
+    &__button {
+        color: $main-text-color;
+        background: none;
+        border: none;
+        opacity: 0;
+    }
+}
+
+.html-slider__buttons-wrapper {
+    position: relative;
+}
