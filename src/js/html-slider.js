@@ -23,7 +23,7 @@ function setBgPosition(param) {
     if (currentPosition >= 0 ) {
         currentPosition = -cardWidth;
     }
-    if (currentPosition <= -sliderWidth) {
+    if (currentPosition <= (-sliderWidth + cardWidth)) {
         currentPosition = -sliderWidth + cardWidth;
     }
 
@@ -37,6 +37,7 @@ function setBgPosition(param) {
             slider.style.left = `${currentPosition}px`;
         break;
     }
+
     console.log('sw', cardWidth);
         console.log('cp', currentPosition);
 }
