@@ -1,6 +1,7 @@
 
 // JS - ./js/index.js
 import './js/'
+import './js/jquery.countdown.js'
 // SCSS
 import './scss/main.scss'
 // CSS (example)

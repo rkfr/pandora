@@ -7,8 +7,8 @@ body {
 	margin: 0;
 	letter-spacing: 0.06em;
 	color: $main-text-color;
-	background: url(../img/body-bg.jpg) repeat-y center top -2508px;
-	background-size: 100%;
+	background: url(../img/fon.jpg) repeat-y center top;
+	background-size: inherit;
 	font-family: $myriad-regular;
 }
 
@@ -45,6 +45,8 @@ h6 {
 
 h1 {
 	font-size: rem(82);
+	text-transform: uppercase;
+	text-align: center;
 }
 
 h2 {
@@ -98,7 +100,7 @@ button:active {
 	color: $main-text-color;
 	text-transform: uppercase;
 	font-size: rem(40);
-	padding: 30px 40px 27px;
+	padding: 25px 30px 22px;
 	text-align: center;
 	border-radius: 20px;
 	cursor: pointer;

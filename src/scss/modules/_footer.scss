@@ -1,0 +1,41 @@
+.footer {
+    padding: 45px 0;
+    background: $card-hover-color;
+    font-size: rem(36);
+    text-transform: uppercase;
+    justify-content: space-between;
+    &__links {
+        margin-bottom: 50px;
+    }
+    &__tel {
+        margin-right: 40px;
+        color: $WHITE;
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background: url(../img/icon-trubka.png) no-repeat center center;
+            background-size: cover;
+            margin-bottom: -2px;
+            margin-right: 5px;
+        }
+    }
+    &__time {
+        margin-right: auto;
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background: url(../img/icon-chasi.png) no-repeat center center;
+            background-size: cover;
+            margin-bottom: -2px;
+            margin-right: 8px;
+        }
+    }
+    &__code {
+        margin-right: auto;
+        margin-left: 40px;
+    }
+}

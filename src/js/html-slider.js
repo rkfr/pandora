@@ -7,7 +7,9 @@ class HtmlSlider {
             oneCardSize: null,
             cards: null,
             cardsToShow: null,
-            sliderWidth: null
+            sliderWidth: null,
+            maxPosition: null,
+            diff: null
         };
 
         this.params = {...params};
@@ -26,6 +28,7 @@ class HtmlSlider {
         this.setDomCardsProps();
         this.slideHandler();
         this.setLeftPosition();
+        this.setSliderSpecs();
     }
 
     resizeWatcher() {
@@ -37,35 +40,32 @@ class HtmlSlider {
             this.sliderWidthHandler();
             this.setDomCardsProps();
             this.setLeftPosition();
+            this.setSliderSpecs();
         });
     }
 
     slideHandler() {
-        const {container, oneCardSize, cardsToShow, sliderWidth} = this.state,
+        const {container} = this.state,
             slider = container.querySelector('.html-slider'),
             leftBtn = container.querySelector('.html-slider__general-button_left'),
-            rightBtn = container.querySelector('.html-slider__general-button_right'),
-            diff = oneCardSize * cardsToShow;
+            rightBtn = container.querySelector('.html-slider__general-button_right');
             
             let newPosition = 0;
-            
+
             rightBtn.addEventListener('click', () => {
-                const currentPosition = this.getPositionLeft(slider),
-                maxPosition = -sliderWidth + diff;
+                const currentPosition = this.getPositionLeft(slider);
                 
-                newPosition = currentPosition - oneCardSize;
-                if (newPosition < maxPosition) {
-                    newPosition = maxPosition;    
+                newPosition = currentPosition - this.state.oneCardSize;
+                if (newPosition < this.state.maxPosition) {
+                    newPosition = this.state.maxPosition;    
                 }
-                console.log(newPosition, maxPosition);
-                // newPosition and maxPosition is static!!!
-                // while window size changin thire is non-resizeible
+                // console.log(newPosition, this.state.maxPosition);
                 slider.style.left = `${newPosition}px`;
             });
             leftBtn.addEventListener('click', () => {
                 const currentPosition = this.getPositionLeft(slider);
 
-                newPosition = currentPosition + oneCardSize;
+                newPosition = currentPosition + this.state.oneCardSize;
                 if (newPosition > 0) {
                     newPosition = 0;
                 }
@@ -121,6 +121,15 @@ class HtmlSlider {
             slider = container.querySelector('.html-slider');
         
         slider.style.left = '0';
+    }
+
+    setSliderSpecs() {
+        const {sliderWidth, oneCardSize, cardsToShow} = this.state,
+            diff = oneCardSize * cardsToShow,
+            maxPosition = -sliderWidth + diff;
+
+        this.state.diff = diff;
+        this.state.maxPosition = maxPosition;
     }
 
     setDomCardsProps() {
