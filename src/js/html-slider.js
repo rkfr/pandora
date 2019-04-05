@@ -1,171 +1,181 @@
 'use strict';
 
-const htmlSliderParams = {
-    cardsToShow: 4,
-    cardWidth: 0,
-    cardsCount: getCards().length,
-    windowWidth: window.innerWidth,
-    breakPoint1: 1200,
-    breakPoint2: 768,
-    breakPoint3: 460
-};
+class HtmlSlider {
+    constructor(container, params) {
+        this.state = {
+            container: container,
+            oneCardSize: null,
+            cards: null,
+            cardsToShow: null,
+            sliderWidth: null
+        };
 
-function getCards() {
-    return document.querySelectorAll('.html-slider__card');
+        this.params = {...params};
+
+        this.setState();
+        this.resizeWatcher();
+    }
+
+    setState() {
+        const windowWidth = window.innerWidth;
+
+        this.state.cards = this.getCards().length;
+        this.mediaHandler(windowWidth);
+        this.cardSizeHandler(windowWidth);
+        this.sliderWidthHandler();
+        this.setDomCardsProps();
+        this.slideHandler();
+        this.setLeftPosition();
+    }
+
+    resizeWatcher() {
+        window.addEventListener('resize', ({target}) => {
+            const {innerWidth: windowWidth} = target;
+
+            this.mediaHandler(windowWidth);
+            this.cardSizeHandler(windowWidth);
+            this.sliderWidthHandler();
+            this.setDomCardsProps();
+            this.setLeftPosition();
+        });
+    }
+
+    slideHandler() {
+        const {container, oneCardSize, cardsToShow, sliderWidth} = this.state,
+            slider = container.querySelector('.html-slider'),
+            leftBtn = container.querySelector('.html-slider__general-button_left'),
+            rightBtn = container.querySelector('.html-slider__general-button_right'),
+            diff = oneCardSize * cardsToShow;
+            
+            let newPosition = 0;
+            
+            rightBtn.addEventListener('click', () => {
+                const currentPosition = this.getPositionLeft(slider),
+                maxPosition = -sliderWidth + diff;
+                
+                newPosition = currentPosition - oneCardSize;
+                if (newPosition < maxPosition) {
+                    newPosition = maxPosition;    
+                }
+                console.log(newPosition, maxPosition);
+                // newPosition and maxPosition is static!!!
+                // while window size changin thire is non-resizeible
+                slider.style.left = `${newPosition}px`;
+            });
+            leftBtn.addEventListener('click', () => {
+                const currentPosition = this.getPositionLeft(slider);
+
+                newPosition = currentPosition + oneCardSize;
+                if (newPosition > 0) {
+                    newPosition = 0;
+                }
+
+                slider.style.left = `${newPosition}px`;
+            });
+    }
+
+    cardSizeHandler(windowWidth) {
+        const {cardsToShow} = this.state;
+        this.state.oneCardSize = parseInt((windowWidth / cardsToShow) * 0.8);
+    }
+
+    sliderWidthHandler() {
+        const {oneCardSize, cards} = this.state;
+        this.state.sliderWidth = oneCardSize * cards;
+    }
+
+    mediaHandler(windowWidth) {
+        const {media} = this.params;
+
+        if (windowWidth > media.lg.point) {
+            this.state.cardsToShow = this.params.slidesToShow;
+        }
+
+        if (windowWidth < media.lg.point) {
+            this.state.cardsToShow = media.lg.value;
+        }
+
+        if (windowWidth < media.md.point) {
+            this.state.cardsToShow = media.md.value;
+        }
+
+        if (windowWidth < media.sm.point) {
+            this.state.cardsToShow = media.sm.value;
+        }
+    }
+
+    getCards() {
+        return this.state.container.querySelectorAll('.html-slider__card');
+    }
+
+    getPositionLeft(elem) {
+        const left = +elem.style.left
+                        .split('')
+                        .filter(s => s !== 'p' && s !== 'x')
+                        .join('');
+        return Math.floor(left); 
+    }
+
+    setLeftPosition() {
+        const {container} = this.state,
+            slider = container.querySelector('.html-slider');
+        
+        slider.style.left = '0';
+    }
+
+    setDomCardsProps() {
+        const cards = this.getCards();
+        
+        let cardIndex = 0;
+        for (let card of cards) {
+            this.setDomCardProps(card, cardIndex);
+            ++cardIndex;
+        }
+    }
+
+    setDomCardProps(card, idx) {
+        const {oneCardSize} = this.state,
+            cardPosition = oneCardSize * idx;
+        
+        card.style.left = `${cardPosition}px`;
+        card.style.width = `${oneCardSize}px`;
+    }
 }
 
-function setBgPosition({param, slider,  currentSliderPosition}) {
-    let newSliderPosition = 0;
-    const {cardWidth, cardsCount, cardsToShow} = htmlSliderParams;
-    const oneCardWidth = parseInt(cardWidth);
-    const sliderLength = oneCardWidth * (cardsCount - cardsToShow);
-
-    switch(param) {
-        case 'right':
-            newSliderPosition = currentSliderPosition - oneCardWidth;
-            if (newSliderPosition < -sliderLength) {
-                newSliderPosition = 0;
+const immobilizer = document.getElementById('immobilizer-slider'),
+    imbSlider = new HtmlSlider(immobilizer, {
+        slidesToShow:  4,
+        media: {
+            lg: {
+                point: 1200,
+                value: 3
+            },
+            md: {
+                point: 890,
+                value: 2
+            },
+            sm: {
+                point: 560,
+                value: 1
             }
-            slider.style.left = `${newSliderPosition}px`;
-        break;
-        case 'left':
-            newSliderPosition = currentSliderPosition + oneCardWidth;
-            if (newSliderPosition > 0) {
-                newSliderPosition = -sliderLength;
-            } 
-            slider.style.left = `${newSliderPosition}px`;
-        break;
-    }
-    
-}
-
-
-function sliderButtonsHandler(leftButton, rightButton) {
-    
-    setTimeout(() => {
-        const {slider} = setDefaultSliderStyle();
-
-        leftButton.addEventListener('click', e => {
-            setBgPosition({
-                param: 'left',
-                slider,
-                currentSliderPosition: styleToNum(slider.style.left)
-            });
-        });
-    
-        rightButton.addEventListener('click', e => {
-            setBgPosition({
-                param: 'right',
-                slider,
-                currentSliderPosition: styleToNum(slider.style.left)
-            });
-        });
-
-    }, 200);
-    
-}
-
-function cardsCountHandler(screenWidth) {
-    const {breakPoint1: large, breakPoint2: mid, breakPoint3: small} = htmlSliderParams;
-    let cardsCount = 0;
-
-    if (screenWidth >= large) {
-        cardsCount = 4;
-    }
-    if (screenWidth <= large) {
-        cardsCount = 3;
-    }
-    if (screenWidth <= mid) {
-        cardsCount = 2;
-    }
-    if (screenWidth <= small) {
-        cardsCount = 1;
-    }
-    
-    return cardsCount;
-}
-
-function setDefaultSliderStyle() {
-    const {cardWidth, cardsCount} = htmlSliderParams;
-    const oneCardWidth = parseInt(cardWidth);
-    const slider = document.querySelector('.html-slider');
-                                    
-    slider.style.width = `${oneCardWidth * cardsCount}px`;
-    slider.style.left = '0';
-
-    return {
-        slider
-    }
-}
-
-function cardSizeHandler(card, idx) {
-    const cardsToShow = cardsCountHandler(window.innerWidth);
-    const startCardWidth = (window.innerWidth / cardsToShow) * 0.78;
-
-    htmlSliderParams.cardWidth = startCardWidth;
-
-    window.addEventListener('load', () => {
-        card.style.left = `${startCardWidth * idx}px`;
-        card.style.top = `10px`;
-        card.style.width  =`${startCardWidth}px`;
-        setDefaultSliderStyle();
+        }
     });
-    
-    cardsCountHandler(startCardWidth);
 
-    window.addEventListener('resize', debounce(function(e) {
-        const {innerWidth: width} = e.target;
-        htmlSliderParams.cardsToShow = cardsCountHandler(width);
-        const cardWidth = (width / htmlSliderParams.cardsToShow) * 0.78;
-
-        setDefaultSliderStyle();
-        htmlSliderParams.windowWidth = width;
-        card.style.width = `${cardWidth}px`;
-        card.style.left = `${cardWidth * idx}px`;
-        htmlSliderParams.cardWidth = cardWidth;
-    }, 20));
-}
-
-function htmlSlider() {
-    const leftButton = document.querySelector('.html-slider__general-button_left');
-    const rightButton = document.querySelector('.html-slider__general-button_right');
-    const cards = getCards();
-    
-    sliderButtonsHandler(leftButton, rightButton);
-
-    let cardIdx = 0;
-    for (let card of cards) {
-        cardSizeHandler(card, cardIdx);
-        ++cardIdx;
-    }
-};
-
-htmlSlider();
-
-
-// utils
-
-function styleToNum(str) {
-    return +str
-    .split('')
-    .filter(p => p !== 'p' && p !== 'x')
-    .join('');
-}
-
-function debounce(f, ms) {
-
-    let timer = null;
-  
-    return function (...args) {
-      const onComplete = () => {
-        f.apply(this, args);
-        timer = null;
-      }
-  
-      if (timer) {
-        clearTimeout(timer);
-      }
-  
-      timer = setTimeout(onComplete, ms);
-    };
-}
+const remoteAlarm = document.getElementById('remote-alarm-slider'),
+    remAlrmSlider = new HtmlSlider(remoteAlarm, {
+        slidesToShow:  4,
+        media: {
+            lg: {
+                point: 1200,
+                value: 3
+            },
+            md: {
+                point: 890,
+                value: 2
+            },
+            sm: {
+                point: 560,
+                value: 1
+            }
+        }
+    });
