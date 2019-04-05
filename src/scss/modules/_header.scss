@@ -1,1 +1,91 @@
-// header style
+.header {
+    padding-top: 30px;
+    &__nav {
+        justify-content: space-between;
+        text-transform: uppercase;
+        font-size: rem(36);
+    }
+    &__tel {
+        margin-right: 40px;
+        color: $WHITE;
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background: url(../img/icon-trubka.png) no-repeat center center;
+            background-size: cover;
+            margin-bottom: -2px;
+            margin-right: 5px;
+        }
+    }
+    &__time {
+        margin-right: auto;
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background: url(../img/icon-chasi.png) no-repeat center center;
+            background-size: cover;
+            margin-bottom: -2px;
+            margin-right: 8px;
+        }
+    }
+    &__subtitle {
+        text-transform: uppercase;
+        font-size: rem(48);
+        margin-top: 80px;
+    }
+    &__text {
+        font-size: rem(36);
+    }
+    &__logo {
+        margin: 20px 0 25px;
+    }
+    &__text {
+        margin-bottom: 9px;
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background: url(../img/icon-success.png) no-repeat center center;
+            background-size: cover;
+            margin-bottom: -2px;
+            margin-right: 8px;
+        }
+    }
+}
+.form-header {
+    background: $card-hover-color;
+    height: 100%;
+    padding: 45px 65px 35px;
+    margin: 95px 0 0 75px;
+    flex-direction: column;
+    &__title {
+        font-size: rem(48);
+        text-transform: uppercase;
+        margin-bottom: 35px;
+    }
+    &__input {
+        padding: 15px 10px 15px 65px;
+        border-radius: 20px;
+        border: none;
+        margin-bottom: 25px;
+    }
+    &__btn {
+        font-size: rem(48);
+        text-transform: uppercase;
+        color: $main-text-color;
+        text-align: center;
+        background: none;
+        border: none;
+        transition: all 0.6s ease;
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.03);
+        };
+    }
+
+}

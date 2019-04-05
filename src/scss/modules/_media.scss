@@ -1,0 +1,33 @@
+@media screen and (max-width: $mediaXXL) {
+    .container {
+        width: $containerXL;
+    }
+}
+
+@media screen and (max-width: $mediaXL) {
+
+}
+
+@media screen and (max-width: $mediaLG) {
+    .container {
+        width: $containerLG;
+    }
+}
+
+@media screen and (max-width: $mediaMD) {
+    .container {
+        width: $containerMD;
+    }
+}
+
+@media screen and (max-width: $mediaSM) {
+    .container {
+        width: $containerSM;
+    }
+}
+
+@media screen and (max-width: $mediaESM) {
+    .container {
+        width: $containerESM;
+    }
+}

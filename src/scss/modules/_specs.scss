@@ -1,5 +1,105 @@
+html {
+	font-size: $mainFontSize;
+}
+
 body {
-	height: 8000px;
-	background: url('../img/body-bg.jpg') repeat-y center top;
-	background-size: contain;
+	padding: 0;
+	margin: 0;
+	letter-spacing: 0.06em;
+	color: $main-text-color;
+	background: url(../img/body-bg.jpg) repeat-y center top -2508px;
+	background-size: 100%;
+	font-family: $myriad-regular;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+ul,
+li {
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	padding: 0;
+	margin: 0;
+	font-family: $myriad-bold;
+}
+
+h1 {
+	font-size: rem(82);
+}
+
+h2 {
+	font-size: rem(82);
+	text-transform: uppercase;
+}
+
+h3 {
+	font-size: rem(48);
+}
+
+h4 {
+	font-size: rem(36);
+}
+
+a,
+a:hover,
+a:active  {
+	transition: all 0.6s ease;
+	text-decoration: none;
+}
+
+input:focus,
+input,
+input:hover,
+input:active,
+button:focus,
+button,
+button:hover,
+button:active {
+	outline: none;
+}
+
+.d-flex {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+.container {
+	width: $containerXXL;
+	margin: 0 auto;
+}
+
+.modal-btn {
+	display: block;
+	border: none;
+	background: $button-color;
+	color: $main-text-color;
+	text-transform: uppercase;
+	font-size: rem(40);
+	padding: 30px 40px 27px;
+	text-align: center;
+	border-radius: 20px;
+	cursor: pointer;
 }
