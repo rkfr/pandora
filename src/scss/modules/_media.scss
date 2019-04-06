@@ -2,31 +2,110 @@
     .container {
         width: $containerXL;
     }
+    html {
+        font-size: 15px;
+    }
+    .modal-btn {
+        font-size: rem(35);
+    }
+    h1 {
+        font-size: rem(75);
+    }
+    h2 {
+        font-size: rem(75);
+    }
+    h3 {
+        font-size: rem(40);
+    }
+    h4 {
+        font-size: rem(36);
+    }
+    .signaling,
+    .complex-solutions,
+    .how-to-find {
+        padding-top: 150px;
+    }
+    .header {
+        &__nav {
+            font-size: rem(30);
+        }
+    }
+    .signaling {
+        padding-top: 150px;
+    }
+    .complex-solutions {
+        &__card {
+            width: 32%;
+        }
+        &__subtitle {
+            font-size: rem(30);
+        }
+        &__text {
+            font-size: rem(30);
+        }
+        &__price {
+            font-size: rem(30);
+        }
+    }
+    .footer {
+        font-size: rem(30);
+    }
+
 }
 
 @media screen and (max-width: $mediaXL) {
-
+    .container {
+        width: $containerLG;
+    }
+    html {
+        font-size: 14px;
+    }
+    .signaling,
+    .complex-solutions,
+    .how-to-find {
+        padding-top: 120px;
+    }
+    .header {
+        &__logo {
+            width: 80%;
+        }
+        &__title {
+            margin-top: 120px;
+            margin-bottom: 60px;
+        }
+    }
+    .form-header {
+        margin-left: 30px;
+    }
+    .complex-solutions {
+        &__info {
+            min-height: 980px;
+        }
+        &__text {
+            font-size: rem(29);
+        }
+    }
+    .footer {
+        font-size: rem(28);
+    }
 }
 
 @media screen and (max-width: $mediaLG) {
     .container {
-        width: $containerLG;
+        width: $containerMD;
+    }
+    html {
+        font-size: 13px;
     }
 }
 
 @media screen and (max-width: $mediaMD) {
     .container {
-        width: $containerMD;
-    }
-}
-
-@media screen and (max-width: $mediaSM) {
-    .container {
         width: $containerSM;
     }
 }
 
-@media screen and (max-width: $mediaESM) {
+@media screen and (max-width: $mediaSM) {
     .container {
         width: $containerESM;
     }
