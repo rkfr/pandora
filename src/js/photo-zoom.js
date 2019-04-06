@@ -1,23 +1,20 @@
 function showFullScreenImage(watchArea) {
     watchArea.addEventListener('click', ({target}) => {
-        const {src} = target;
+        const {src} = target,
+            body = document.body;
 
-        // if (target.tagName !== 'IMG') return;
-
-        if (src) {
-            const modalWindow = renderWindow(src);
-            watchArea.append(modalWindow);
-            
-            setTimeout( () =>  removeElement(modalWindow), 0);
+        if (body.contains(document.querySelector('.zoomed-photo'))) {
+            document.querySelector('.zoomed-photo').remove();
+            return;
         }
 
-        
-    });
-}
+        if (target.tagName !== 'IMG') return;
 
-function removeElement(el) {
-    document.body.addEventListener('click', () => {
-            el.remove();
+        else if (src) {
+            watchArea.append(renderWindow(src));
+        }
+
+        return;
     });
 }
 
