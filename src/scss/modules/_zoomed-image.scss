@@ -1,0 +1,24 @@
+.zoomed-photo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $card-hover-color;
+    z-index: 10;
+
+    &__image-container {
+        position: absolute;
+        display: block;
+        @include size(70%, 50%);
+        top: 20%;
+        left: 15%;
+        z-index: 55;
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}

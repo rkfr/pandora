@@ -203,4 +203,4 @@ const certificate = document.getElementById('certificate-alarm-slider'),
     certificateSlider = new HtmlSlider(certificate, certificateParams);
 
 const outWorks = document.getElementById('our-works-alarm-slider'),
-outWorksSlider = new HtmlSlider(outWorks, certificateParams);
+    outWorksSlider = new HtmlSlider(outWorks, certificateParams);
