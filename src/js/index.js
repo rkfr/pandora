@@ -1,3 +1,4 @@
-// Main js file
+'use strict';
 
-// another js file (example)
+import './html-slider';
+import './photo-zoom.js';

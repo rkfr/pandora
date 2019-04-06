@@ -25,7 +25,8 @@
     "merge",
     "bable",
     "bable7",
-    "scss"
+    "scss",
+    "pug"
   ],
   "license": "MIT",
   "devDependencies": {
@@ -51,7 +52,11 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
+    "jquery": "^3.3.1",
     "normalize.css": "^8.0.1",
-    "normalize.min.css": "^8.0.0"
+    "normalize.min.css": "^8.0.0",
+    "pug": "^2.0.3",
+    "pug-cli": "^1.0.0-alpha6",
+    "pug-loader": "^2.4.0"
   }
 }

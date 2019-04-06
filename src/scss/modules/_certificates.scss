@@ -1,0 +1,37 @@
+.certificates {
+
+    &__title {
+        padding-bottom: 60px;
+    }
+
+    &__slider-container {
+        height: 680px;
+        position: relative;
+    }
+
+    &__slider-card {
+        height: 680px;
+
+        &:hover {
+            background: none;
+        }
+    }
+
+    &__photo-container {
+        padding: 0 14%;
+    }
+
+    &__photo-wrapper {
+        padding: 0 7px;
+    }
+
+    &__photo {
+        display: block;
+        @include size(100%);
+        object-fit: fill;
+    }
+
+    &__slider-wraper-button {
+        top: 250px ;
+    }
+}
