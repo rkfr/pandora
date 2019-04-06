@@ -1,0 +1,16 @@
+.product-card {
+    &__container {
+        padding-top: 200px;
+    }
+
+    &__title {
+        text-align: center !important;
+    }
+
+    &__text {
+        margin-top: 50px;
+        margin-bottom: 75px;
+        font-family: $myriad-regular;
+        font-size: 36px;
+    }
+}

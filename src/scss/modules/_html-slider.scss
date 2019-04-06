@@ -2,23 +2,50 @@
     position: relative;
     overflow: hidden;
     margin: 0 10%;
-    height: 20vw;
+    height: 470px;
+    box-sizing: border-box;
 }
 
 .html-slider {
     position: absolute;
     transition: .7s ease;
     left: 0;
+    height: 470px;
 
     &__general-button {
+        @include size(94px);
+        border-radius: 50%;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        background: url(../img/button-arrow-left.png) center center no-repeat;
+        background-size: cover;
+
         &_left {}
-        &_right {}
+        &_right {
+            transform: rotate(180deg);
+        }
     }
 
     &__card {
         color: $main-text-color;
         position: absolute;
+        padding-top: 30px;
+        padding-right: 60px;
+        padding-left: 60px;
+        padding-bottom: 40px;
+        height: 470px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: $myriad-bold;
+        font-size: 36px;
         
+        &:hover {
+            background: $card-hover-color;
+        }
+
         &:hover .html-slider__button {
             opacity: 1;
         }
@@ -30,17 +57,21 @@
         justify-content: center;
         text-align: center;
 
+        &_card-button-wrapper {
+            margin-top: 20px;
+        }
+
         &_left-button {
             position: absolute;
-            left: 5%;
-            top: 40%;
+            left: 2.5%;
+            top: 145px;
             z-index: 1;
         }
 
         &_right-button {
             position: absolute;
-            right: 5%;
-            top: 40%;
+            right: 2.5%;
+            top: 145px;
             z-index: 1;
         }
     }
@@ -48,11 +79,12 @@
     &__image {
         display: block;
         object-fit: cover;
-        @include size(50%, 100%);
+        @include size(70%, 100%);
     }
 
     &__text {
-
+        display: block;
+        padding-top: 45px;
     }
 
     &__button {
@@ -60,6 +92,8 @@
         background: none;
         border: none;
         opacity: 0;
+        text-transform: uppercase;
+        cursor: pointer;
     }
 }
 
