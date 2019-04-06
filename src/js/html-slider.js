@@ -151,40 +151,32 @@ class HtmlSlider {
     }
 }
 
-const immobilizer = document.getElementById('immobilizer-slider'),
-    imbSlider = new HtmlSlider(immobilizer, {
-        slidesToShow:  4,
-        media: {
-            lg: {
-                point: 1700,
-                value: 3
-            },
-            md: {
-                point: 1200,
-                value: 2
-            },
-            sm: {
-                point: 890,
-                value: 1
-            }
+const sliderParams = {
+    slidesToShow:  4,
+    media: {
+        lg: {
+            point: 1700,
+            value: 3
+        },
+        md: {
+            point: 1200,
+            value: 2
+        },
+        sm: {
+            point: 890,
+            value: 1
         }
-    });
+    }
+}
 
-// const remoteAlarm = document.getElementById('remote-alarm-slider'),
-//     remAlrmSlider = new HtmlSlider(remoteAlarm, {
-//         slidesToShow:  4,
-//         media: {
-//             lg: {
-//                 point: 1200,
-//                 value: 3
-//             },
-//             md: {
-//                 point: 890,
-//                 value: 2
-//             },
-//             sm: {
-//                 point: 560,
-//                 value: 1
-//             }
-//         }
-//     });
+const immobilizer = document.getElementById('immobilizer-slider'),
+    imbSlider = new HtmlSlider(immobilizer, sliderParams);
+
+const remoteAlarm = document.getElementById('remote-alarm-slider'),
+    remAlrmSlider = new HtmlSlider(remoteAlarm, sliderParams);
+
+const microAlarm = document.getElementById('micro-alarm-slider'),
+    microAlarmSlider = new HtmlSlider(microAlarm, sliderParams);
+
+const gsmAlarm = document.getElementById('gsm-alarm-slider'),
+    gsmAlarmSlider = new HtmlSlider(gsmAlarm, sliderParams);
