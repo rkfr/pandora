@@ -95,8 +95,17 @@
         margin-bottom: 35px;
         text-align: center;
     }
+    &__wrapp {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 430px;
+    }
     &__input {
-        padding: 15px 10px 15px 65px;
+        padding: 15px 10px 15px 20px;
+        width: 100%;
+        max-width: 200px;
         border-radius: 20px;
         border: none;
         margin-bottom: 25px;
@@ -115,5 +124,4 @@
             transform: scale(1.03);
         };
     }
-
 }

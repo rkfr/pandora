@@ -39,8 +39,12 @@
           <p class="form-header__title">
             Оставить заявку
           </p>
-          <input type="text" class="form-header__input" placeholder="Ваше имя">
-          <input type="tel" class="form-header__input" placeholder="+7 (...)...-..-..">
+          <div class="form-header__wrapp">
+            <input name="name" type="text" class="form-header__input" placeholder="Ваше имя">
+            <input name="tel" type="tel" class="form-header__input" placeholder="+7 (...)...-..-..">
+            <input name="mark" type="text" class="form-header__input" placeholder="Марка авто">
+            <input name="model" type="text" class="form-header__input" placeholder="Модель">
+          </div>
           <button class="form-header__btn">Отправить</button>
         </form>
       </div>
@@ -194,7 +198,7 @@
           <a href="tel:88126086368" class="footer__tel">8 (812) 608-63-68</a>
           <p class="footer__time">С 10:00 до 21:00</p>
       </div>
-      <div class="footer_texts d-flex">
+      <div class="footer__texts d-flex">
           <p class="footer__coppy">
               Copyright © 2019<br>
               ИП Миронов 

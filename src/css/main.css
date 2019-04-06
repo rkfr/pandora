@@ -34,3 +34,13 @@
 #cnt_10 {
     display: none;
 }
+
+@media screen and (max-width: 576px) {
+	#cd {
+        transform: scale(0.67);
+        width: 450px !important;
+    }
+	.cntSeparator {
+		margin: 0 5px;
+	}
+}
