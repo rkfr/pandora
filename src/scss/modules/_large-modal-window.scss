@@ -8,6 +8,10 @@
     padding: 0;
 }
 
+.modal-active {
+    display: block !important;
+}
+
 .modal-windows {
     display: none;
     overflow: scroll;
@@ -18,6 +22,7 @@
     top: 0;
     bottom: 0;
     font-family: $open-sans-r;
+    z-index: 9;
 }
 
 .large-modal-window {
