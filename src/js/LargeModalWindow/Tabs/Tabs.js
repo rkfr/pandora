@@ -1,5 +1,3 @@
-import './Tabs.css'; 
-
 export default class Tabs {
     constructor(container) {
       this.data = {
@@ -10,7 +8,7 @@ export default class Tabs {
           elDefault: ""
         }
       };
-  
+      
       this.lounchOrdeManager();
     }
   
@@ -34,11 +32,11 @@ export default class Tabs {
     }
   
     getNavBtns() {
-      return this.data.container.querySelectorAll(".nav-li");
+      return this.data.container.querySelectorAll(".tabs__navigation-item");
     }
   
     getInfoSections() {
-      return this.data.container.querySelectorAll(".info");
+      return this.data.container.querySelectorAll(".tabs__tab");
     }
   
     setDefaultClass() {

@@ -11,3 +11,13 @@
   src: url('../fonts/MyriadPro-Regular.woff') format('woff'), /* Pretty Modern Browsers */
        url('../fonts/MyriadPro-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
 }
+
+@font-face {
+  font-family: 'Open Sans Regular';
+  src: url('../fonts/OpenSans-Regular.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto', sans-serif;
+  src: url('../fonts/Roboto-Regular.ttf')  format('truetype');
+}

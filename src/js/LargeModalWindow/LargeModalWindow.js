@@ -1,5 +1,10 @@
 import Tabs from './Tabs/Tabs';
 
-const test = new Tabs;
+// const largeModalWindowParams = {
 
-console.log(test);
+// }
+
+const containerIs670 = document.getElementById("is-670"),
+    is670Tabs = new Tabs(containerIs670);
+
+  
