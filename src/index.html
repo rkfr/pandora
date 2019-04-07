@@ -40,10 +40,18 @@
             Оставить заявку
           </p>
           <div class="form-header__wrapp">
-            <input name="name" type="text" class="form-header__input" placeholder="Ваше имя">
+            <label class="form-header__label">
+              <input name="name" type="text" class="form-header__input" placeholder="Ваше имя">
+            </label>
+            <label class="form-header__label">
             <input name="tel" type="tel" class="form-header__input" placeholder="+7 (...)...-..-..">
+            </label>
+            <label class="form-header__label">
             <input name="mark" type="text" class="form-header__input" placeholder="Марка авто">
+            </label>
+            <label class="form-header__label">
             <input name="model" type="text" class="form-header__input" placeholder="Модель">
+            </label>
           </div>
           <button class="form-header__btn">Отправить</button>
         </form>
@@ -58,7 +66,7 @@
           <div class="header__timer-time header__timer-time_minutes">Минут</div>
         </div>
         <div class="clear"></div>
-        <button class="modal-btn header__btn">Оставить заявку</button>
+        <button class="modal-btn header__btn open-modal">Оставить заявку</button>
       </div>
     </div>
   </header>
@@ -103,7 +111,7 @@
           </p>
         </div>
       </div>
-      <button class="modal-btn signaling__btn">Оставить заявку</button>
+      <button class="modal-btn signaling__btn open-modal">Оставить заявку</button>
     </div>
   </section>
   <section class="complex-solutions">
@@ -130,7 +138,7 @@
                 <br>от 25 000 р
             </p>
           </div>
-          <button class="modal-btn complex-solutions__btn">Оставить заявку</button>
+          <button class="modal-btn complex-solutions__btn open-modal">Оставить заявку</button>
         </div>
         <div class="complex-solutions__card">
           <div class="complex-solutions__info">
@@ -152,7 +160,7 @@
                 <br>от 50 000 р 
             </p>
           </div>
-          <button class="modal-btn complex-solutions__btn">Оставить заявку</button>
+          <button class="modal-btn complex-solutions__btn open-modal">Оставить заявку</button>
         </div>
         <div class="complex-solutions__card">
           <div class="complex-solutions__info">
@@ -174,7 +182,7 @@
                 <br>от 100 000 р
             </p>
           </div>
-          <button class="modal-btn complex-solutions__btn">Оставить заявку</button>
+          <button class="modal-btn complex-solutions__btn open-modal">Оставить заявку</button>
         </div>
       </div>
     </div>
@@ -280,7 +288,7 @@
     </div>
 
     <div class="product-card__button-wrapper">
-      <button class="product-card__button">
+      <button class="product-card__button open-modal">
         Оставить заявку
       </button>
     </div>
@@ -387,7 +395,7 @@
       </div>
       
       <div class="product-card__button-wrapper">
-        <button class="product-card__button">
+        <button class="product-card__button open-modal">
           Оставить заявку
         </button>
       </div>
@@ -492,7 +500,7 @@
               <button class="html-slider__general-button html-slider__general-button_right" aria-label="slider right button"></button>
           </div>
           <div class="product-card__button-wrapper">
-            <button class="product-card__button">
+            <button class="product-card__button open-modal">
               Оставить заявку
             </button>
           </div>
@@ -601,7 +609,7 @@
       </div>
 
       <div class="product-card__button-wrapper">
-        <button class="product-card__button">
+        <button class="product-card__button open-modal">
           Оставить заявку
         </button>
       </div>
@@ -715,7 +723,7 @@
     </div>
 
     <div class="product-card__button-wrapper">
-      <button class="product-card__button">
+      <button class="product-card__button open-modal">
         Оставить заявку
       </button>
     </div>
@@ -749,6 +757,72 @@
       </div>
     </div>
   </footer>
+  <div class="modal-form">
+      <div class="modal-form__overlay"></div>
+      <form action="success.php" class="modal-form__wrapp js-form d-flex" data-id="popupResult">
+        <p class="modal-form__title">
+          Оставить заявку
+        </p>
+        <label class="modal-form__label">
+          <input name="name" type="text" class="modal-form__input" placeholder="Ваше имя">
+        </label>
+        <label class="modal-form__label">
+          <input name="tel" type="tel" class="modal-form__input" placeholder="+7 (...)...-..-..">
+        </label>
+        <button class="modal-form__btn" [data-submit]>
+          Оставить заявку
+        </button>
+      </form>
+    </div>
+    <div class="big-form">
+        <div class="big-form__overlay"></div>
+        <form action="success.php" class="big-form__wrapp js-form d-flex" data-id="popupResult">
+          <p class="big-form__title">
+            Подбор системы и расчёт стоимости
+          </p>
+          <p class="big-form__text">
+            Получите оптимальные варианты противоугонных систем и расчёт стоимости установки на электронную почту
+          </p>
+          <div class="big-form__fields d-flex">
+            <label class="big-form__label">
+              <input name="mark" type="text" class="big-form__input" placeholder="Марка">
+            </label>
+            <label class="big-form__label">
+              <input name="model" type="text" class="big-form__input" placeholder="Модель">
+            </label>
+            <label class="big-form__label">
+              <input name="mile" type="text" class="big-form__input" placeholder="Пробег">
+            </label>
+            <label class="big-form__label">
+              <input name="year" type="text" class="big-form__input" placeholder="Год">
+            </label>
+            <label class="big-form__label big-form__label_big">
+              <textarea name="comment" id="" cols="30" rows="10" class="big-form__textarea" placeholder="Комментарии и пожелания"></textarea>
+            </label>
+            <label class="big-form__label">
+              <input name="name" type="text" class="big-form__input" placeholder="Ваше имя">
+            </label>
+            <label class="big-form__label">
+              <input name="tel" type="tel" class="big-form__input" placeholder="Телефон">
+            </label>
+            <label class="big-form__label big-form__label_big">
+                <input name="email" type="email" class="big-form__input" placeholder="E-mail">
+            </label>
+            <button class="big-form__btn" [data-submit]>
+              Получить варианты на почту
+            </button>
+          </div>
+        </form>
+      </div>
+  <div id="loader">
+      <img src="assets/img/ripple.svg">
+  </div>
+  <div id="overlay">
+    <div id="thx">
+      Спасибо! Мы обязательно вам перезвоним
+    </div>
+  </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
 </body>
 </html>

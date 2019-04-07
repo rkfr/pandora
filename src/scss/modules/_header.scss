@@ -102,6 +102,11 @@
         justify-content: space-between;
         max-width: 430px;
     }
+    &__label {
+		position: relative;
+		width: 100%;
+		max-width: 200px;
+    }
     &__input {
         padding: 15px 10px 15px 20px;
         width: 100%;
