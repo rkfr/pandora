@@ -22,7 +22,9 @@
     }
     .signaling,
     .complex-solutions,
-    .how-to-find {
+    .how-to-find,
+    .product-card__container,
+    .our-works {
         padding-top: 150px;
     }
     .header {
@@ -57,6 +59,15 @@
             font-size: rem(30);
         }
     }
+    .html-slider {
+        &__general-button {
+            width: 74px;
+            height: 74px;
+        }
+        &__button {
+            font-size: rem(30);
+        }
+    }
     .footer {
         font-size: rem(30);
         &__tel::before,
@@ -77,7 +88,9 @@
     }
     .signaling,
     .complex-solutions,
-    .how-to-find {
+    .how-to-find,
+    .product-card__container,
+    .our-works {
         padding-top: 120px;
     }
     .header {
@@ -100,8 +113,31 @@
             font-size: rem(28);
         }
     }
+    .html-slider {
+        &__general-button {
+            width: 64px;
+            height: 64px;
+        }
+    }
     .footer {
         font-size: rem(28);
+    }
+}
+
+@media screen and (min-width: $mediaLG) {
+    .html-slider {
+        &__button {
+            opacity: 0;
+        }
+        &__card {
+            &:hover {
+                background: $card-hover-color;
+            }
+    
+            &:hover .html-slider__button {
+                opacity: 1;
+            }
+        }
     }
 }
 
@@ -111,7 +147,9 @@
     }
     .signaling,
     .complex-solutions,
-    .how-to-find {
+    .how-to-find,
+    .product-card__container,
+    .our-works {
         padding-top: 100px;
     }
     .header {
@@ -149,9 +187,20 @@
             margin-bottom: 10px;
         }
     }
+    .product-card {
+        &__title {
+            font-size: rem(60);
+        }
+    }
     .signaling {
         &__card {
             width: 48%;
+        }
+    }
+    .html-slider {
+        &__general-button {
+            width: 60px;
+            height: 60px;
         }
     }
     .footer {
@@ -176,7 +225,9 @@
     }
     .signaling,
     .complex-solutions,
-    .how-to-find {
+    .how-to-find,
+    .product-card__container,
+    .our-works {
         padding-top: 80px;
     }
     .header {
@@ -223,6 +274,27 @@
         }
         &__btn {
             margin-top: 30px;
+        }
+    }
+    .html-slider {
+        &__general-button {
+            width: 45px;
+            height: 45px;
+        }
+        &__card {
+            height: 400px;
+            padding: 20px 30px 30px;
+        }
+        &__container {
+            height: 400px;
+        }
+    }
+    .product-card {
+        &__button-wrapper {
+            margin: 0 auto;
+        }
+        &__text {
+            margin-bottom: 50px;
         }
     }
     .yandex__map {
@@ -273,7 +345,9 @@
     }
     .signaling,
     .complex-solutions,
-    .how-to-find {
+    .how-to-find,
+    .product-card__container,
+    .our-works {
         padding-top: 60px;
     }
     .header {
@@ -301,10 +375,33 @@
     }
     .complex-solutions {
         padding-bottom: 55vw;
+        &__card {
+            width: 90%;
+        }
     }
     .signaling {
         &__card {
             width: 100%;
+        }
+    }
+    .html-slider {
+        &__general-button {
+            width: 30px;
+            height: 30px;
+        }
+        &__card,
+        &__container {
+            height: 370px;
+        }
+    }
+    .product-card {
+        &__title {
+            font-size: 2.2rem;
+        }
+        &__text {
+            font-size: 2rem;
+            margin-top: 30px;
+            margin-bottom: 40px;
         }
     }
     .yandex__map {

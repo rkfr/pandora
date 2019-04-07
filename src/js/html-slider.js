@@ -182,6 +182,24 @@ const gsmAlarm = document.getElementById('gsm-alarm-slider'),
     gsmAlarmSlider = new HtmlSlider(gsmAlarm, sliderParams);
 
 const certificateParams = {
+    slidesToShow:  2,
+    media: {
+        lg: {
+            point: 1700,
+            value: 2
+        },
+        md: {
+            point: 1200,
+            value: 1
+        },
+        sm: {
+            point: 890,
+            value: 1
+        }
+    }
+}
+
+const ourWorksParams = {
     slidesToShow:  1,
     media: {
         lg: {
@@ -203,4 +221,4 @@ const certificate = document.getElementById('certificate-alarm-slider'),
     certificateSlider = new HtmlSlider(certificate, certificateParams);
 
 const outWorks = document.getElementById('our-works-alarm-slider'),
-    outWorksSlider = new HtmlSlider(outWorks, certificateParams);
+    outWorksSlider = new HtmlSlider(outWorks, ourWorksParams);

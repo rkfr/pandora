@@ -100,7 +100,9 @@ button:active {
 	color: $main-text-color;
 	text-transform: uppercase;
 	font-size: rem(40);
-	padding: 25px 30px 22px;
+	padding: 25px 0 22px;
+	width: 100%;
+	max-width: 460px;
 	text-align: center;
 	border-radius: 20px;
 	cursor: pointer;
