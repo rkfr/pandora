@@ -1,0 +1,29 @@
+body {
+    font-family: sans-serif;
+  }
+  
+  .nav {
+    display: flex;
+  }
+  
+  .nav-li {
+    cursor: pointer;
+    list-style: none;
+    padding: 5px;
+  }
+  
+  .info {
+    padding: 25px;
+  }
+  
+  .el-display-none {
+    display: none;
+  }
+  
+  .el-active {
+    display: block;
+  }
+  
+  .nav-el-active {
+    border-bottom: 2px solid green;
+  }
