@@ -181,6 +181,8 @@ button:active {
 	bottom: 0;
 	background: $card-hover-color;
 	z-index: 11;
+	overflow-y: scroll;
+
 	&__title {
 		font-size: rem(34);
 		text-transform: uppercase;
@@ -199,7 +201,7 @@ button:active {
 	}
 	&__wrapp {
 		width: 80%;
-		position: fixed;
+		position: absolute;
 		left: 10%;
 		top: 10%;
 		background: #fff;
