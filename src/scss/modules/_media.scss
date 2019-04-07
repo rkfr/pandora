@@ -139,6 +139,22 @@
             }
         }
     }
+    .certificates {
+        &__slider-card:hover {
+            background: none;
+        }
+        &__photo-wrapper {
+            cursor: pointer;
+        }
+    }
+    .our-works {
+        &__slider-card:hover {
+            background: none;
+        }
+        &__slider-item {
+            cursor: pointer;
+        }
+    }
 }
 
 @media screen and (max-width: $mediaLG) {
@@ -372,6 +388,9 @@
     }
     .form-header {
         padding: 30px;
+        &__label .error {
+            top: 50px;  
+        }
     }
     .complex-solutions {
         padding-bottom: 55vw;
@@ -424,6 +443,11 @@
         }
         &__code {
             margin-top: 20px;
+        }
+    }
+    .big-form {
+        &__label {
+            width: 100%;
         }
     }
 }
