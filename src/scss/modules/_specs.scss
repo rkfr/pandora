@@ -188,11 +188,13 @@ button:active {
 		text-transform: uppercase;
 		color: #333;
 		margin-bottom: 20px;
+		text-align: center;
 	}
 	&__text {
 		color: #808080;
 		font-size: rem(16);
 		margin-bottom: 20px;
+		text-align: center;
 	}
 	&__overlay {
 		width: 100%;
