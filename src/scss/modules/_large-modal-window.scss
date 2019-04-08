@@ -194,3 +194,38 @@
         margin-bottom: 35px;
     }
 }
+
+@media screen and (max-width: 1200px) {
+
+    .large-modal-window {
+        left: 10%;
+        right: 10%;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 990px) {
+
+    .large-modal-window {
+        left: 5%;
+        right: 5%;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+    .large-modal-window__description,       
+    .large-modal-window__get {
+        display: block;
+    }
+
+    .large-modal-window__price-wrapper {
+        margin-bottom: 25px;
+    }
+
+    .large-modal-window__button {
+        max-width: 70%;
+        margin: 0 auto;
+    }
+}

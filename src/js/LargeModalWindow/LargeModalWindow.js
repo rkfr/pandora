@@ -62,7 +62,7 @@ function showMidModal(body) {
 }
 
 // inicialize tabs for one window
-const containerIs670 = document.getElementById("is-670"),
+const containerIs670 = document.getElementById('is-670'),
     is670Tabs = new Tabs(containerIs670);
 
 // find current botton to start window
@@ -73,7 +73,7 @@ startLargeModal(buttonToStartIs670);
 
 // #2
 
-const containerIs5771 = document.getElementById("is-5771"),
+const containerIs5771 = document.getElementById('is-5771'),
     is5771Tabs = new Tabs(containerIs5771);
 
 const  buttonToStartIs5771 = document.querySelector('[data-product-id="is-5771"]');
@@ -82,7 +82,7 @@ startLargeModal(buttonToStartIs5771);
 
 // #3
 
-const containerIs5771_two = document.getElementById("is-5771-2"),
+const containerIs5771_two = document.getElementById('is-5771-2'),
     is5771Tabs_two = new Tabs(containerIs5771_two);
 
 const  buttonToStartIs5771_two = document.querySelector('[data-product-id="is-5771-2"]');
@@ -91,9 +91,29 @@ startLargeModal(buttonToStartIs5771_two);
 
 // #4
 
-const containerIs5771_three = document.getElementById("is-5771-3"),
+const containerIs5771_three = document.getElementById('is-5771-3'),
     is5771Tabs_three = new Tabs(containerIs5771_three);
 
 const  buttonToStartIs5771_three = document.querySelector('[data-product-id="is-5771-3"]');
 
 startLargeModal(buttonToStartIs5771_three);
+
+const remoteAlarm_one = document.getElementById('remote-alarm-1'),
+    remoteAlarm_two = document.getElementById('remote-alarm-2'),
+    remoteAlarm_tree = document.getElementById('remote-alarm-3'),
+    remoteAlarm_four = document.getElementById('remote-alarm-4');
+
+const remoteAlarmTabs_one = new Tabs(remoteAlarm_one),
+    remoteAlarmTabs_two = new Tabs(remoteAlarm_two),
+    remoteAlarmTabs_tree = new Tabs(remoteAlarm_tree),
+    remoteAlarmTabs_four = new Tabs(remoteAlarm_four);
+
+const launchBtn_one = document.querySelector('[data-product-id="remote-alarm-1"]'),
+    launchBtn_two = document.querySelector('[data-product-id="remote-alarm-2"]'),
+    launchBtn_tree = document.querySelector('[data-product-id="remote-alarm-3"]'),
+    launchBtn_four = document.querySelector('[data-product-id="remote-alarm-4"]');
+
+startLargeModal(launchBtn_one);
+startLargeModal(launchBtn_two);
+startLargeModal(launchBtn_tree);
+startLargeModal(launchBtn_four);
