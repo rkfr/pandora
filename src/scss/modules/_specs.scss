@@ -80,6 +80,10 @@ button:active {
 	outline: none;
 }
 
+button {
+	cursor: pointer;
+}
+
 .d-flex {
 	display: -webkit-flex;
 	display: -moz-flex;
