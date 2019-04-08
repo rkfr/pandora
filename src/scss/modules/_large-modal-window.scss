@@ -229,3 +229,10 @@
         margin: 0 auto;
     }
 }
+
+@media screen and (max-width: 480px) {
+
+    .large-modal-window__button {
+        max-width: 94%;
+    }
+}

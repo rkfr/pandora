@@ -171,3 +171,13 @@
         }
     }
 }
+
+@media screen and (max-width: 560px) {
+
+    .description-items__item {
+
+        &::before {
+            left: -15px;
+        }
+    }
+}
