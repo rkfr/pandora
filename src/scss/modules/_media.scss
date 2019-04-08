@@ -124,39 +124,6 @@
     }
 }
 
-@media screen and (min-width: $mediaLG) {
-    .html-slider {
-        &__button {
-            opacity: 0;
-        }
-        &__card {
-            &:hover {
-                background: $card-hover-color;
-            }
-    
-            &:hover .html-slider__button {
-                opacity: 1;
-            }
-        }
-    }
-    .certificates {
-        &__slider-card:hover {
-            background: none;
-        }
-        &__photo-wrapper {
-            cursor: pointer;
-        }
-    }
-    .our-works {
-        &__slider-card:hover {
-            background: none;
-        }
-        &__slider-item {
-            cursor: pointer;
-        }
-    }
-}
-
 @media screen and (max-width: $mediaLG) {
     .container {
         width: $containerMD;
@@ -201,11 +168,12 @@
         }
         &__title {
             margin-bottom: 10px;
+            font-size: rem(50);
         }
     }
     .product-card {
         &__title {
-            font-size: rem(60);
+            font-size: rem(50);
         }
     }
     .signaling {
@@ -230,11 +198,41 @@
             height: 19px;
         }
     }
+    .html-slider {
+        &__button {
+            opacity: 0;
+        }
+        &__card {
+            &:hover {
+                background: $card-hover-color;
+            }
+    
+            &:hover .html-slider__button {
+                opacity: 1;
+            }
+        }
+    }
+    .certificates {
+        &__slider-card:hover {
+            background: none;
+        }
+        &__photo-wrapper {
+            cursor: pointer;
+        }
+    }
+    .our-works {
+        &__slider-card:hover {
+            background: none;
+        }
+        &__slider-item {
+            cursor: pointer;
+        }
+    }
 }
 
 @media screen and (max-width: $mediaMD) {
     .container {
-        width: $containerSM;
+        width: $containerSM !important;
     }
     html {
         font-size: 12px;
@@ -276,6 +274,21 @@
         margin: 50px 0 0 0;
         &__input {
             max-width: 80%;
+        }
+    }
+    .signaling {
+        &__title {
+            font-size: rem(58);
+        }
+    }
+    .complex-solutions {
+        &__title {
+            font-size: rem(58);
+        }
+    }
+    .product-card {
+        &__title {
+            font-size: rem(58);
         }
     }
     .complex-solutions {
@@ -341,7 +354,7 @@
 
 @media screen and (max-width: $mediaSM) {
     .container {
-        width: $containerESM;
+        width: $containerESM !important;
         padding: 0 15px;
     }
     html {
@@ -358,6 +371,21 @@
     }
     h4 {
         font-size: rem(36);
+    }
+    .signaling {
+        &__title {
+            font-size: rem(55);
+        }
+    }
+    .complex-solutions {
+        &__title {
+            font-size: rem(55);
+        }
+    }
+    .product-card {
+        &__title {
+            font-size: rem(55);
+        }
     }
     .signaling,
     .complex-solutions,
@@ -449,5 +477,27 @@
         &__label {
             width: 100%;
         }
+    }
+    #cd {
+        transform: scale(0.67);
+        width: 450px !important;
+    }
+	.cntSeparator {
+		margin: 0 5px;
+    }
+    .certificates__photo-container {
+
+        padding: 0;
+    
+    }
+    .certificates__slider-wraper-button {
+
+        top: 170px;
+    
+    }
+    .our-works__slider-wraper-button {
+
+        top: 30%;
+    
     }
 }
