@@ -44,18 +44,18 @@ h6 {
 }
 
 h1 {
-	font-size: rem(70);
+	font-size: rem(62);
 	text-transform: uppercase;
 	text-align: center;
 }
 
 h2 {
-	font-size: rem(65);
+	font-size: rem(58);
 	text-transform: uppercase;
 }
 
 h3 {
-	font-size: rem(40);
+	font-size: rem(38);
 }
 
 h4 {
@@ -110,6 +110,11 @@ button {
 	text-align: center;
 	border-radius: 20px;
 	cursor: pointer;
+	transition: all .3s ease;
+	&:hover {
+		filter: brightness(0.94);
+		box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+	}
 }
 .modal-form {
 	display: none;
@@ -172,6 +177,11 @@ button {
 		text-align: center;
 		border-radius: 20px;
 		cursor: pointer;
+		transition: all .3s ease;
+		&:hover {
+			filter: brightness(1.05);
+			box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+		}
 	}
 }
 
@@ -252,6 +262,11 @@ button {
 		width: 100%;
 		text-align: center;
 		cursor: pointer;
+		transition: all .3s ease;
+		&:hover {
+			filter: brightness(1.05);
+			box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+		}
 	}
 }
 

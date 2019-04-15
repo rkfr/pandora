@@ -33,5 +33,10 @@
         padding: 15px 0 12px;
         width: 100%;
         cursor: pointer;
+        transition: all .3s ease;
+        &:hover {
+            filter: brightness(1.05);
+            box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+        }
     }
 }

@@ -14,8 +14,8 @@
         &::before {
             content: '';
             display: inline-block;
-            width: 15px;
-            height: 15px;
+            width: 17px;
+            height: 17px;
             background: url(../img/icon-trubka.png) no-repeat center center;
             background-size: cover;
             margin-bottom: -2px;
@@ -82,7 +82,7 @@
         text-align: center;
     }
     &__timer-time {
-        font-size: rem(40);
+        font-size: rem(30);
         &_minutes {
             margin-left: 40px !important;
         }
@@ -157,10 +157,10 @@
 .header__timer .d div {
 	float: left;
 	text-align: center;
-	width: 150px;
+	width: 149px;
 	font-weight: bold;
 	text-transform: uppercase;
-	margin: 10px 0 0 56px;
+	margin: 10px 0 0 60px;
 }
 .header__timer .d div:first-child {
 	margin-left: 1px;

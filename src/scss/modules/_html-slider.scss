@@ -13,7 +13,7 @@
     height: 470px;
 
     &__general-button {
-        @include size(94px);
+        @include size(74px);
         border-radius: 50%;
         background: transparent;
         border: none;
@@ -23,6 +23,7 @@
         &_right {
             transform: rotate(180deg);
         }
+        
     }
 
     &__card {
@@ -87,7 +88,7 @@
         border: none;
         opacity: 0;
         text-transform: uppercase;
-        font-size: rem(22);
+        font-size: rem(18);
         font-family: $myriad-bold;
         cursor: pointer;
         opacity: 1;
