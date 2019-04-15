@@ -1,128 +1,3 @@
-@media screen and (max-width: $mediaXXL) {
-    .container {
-        width: $containerXL;
-    }
-    html {
-        font-size: 15px;
-    }
-    .modal-btn {
-        font-size: rem(35);
-    }
-    h1 {
-        font-size: rem(75);
-    }
-    h2 {
-        font-size: rem(75);
-    }
-    h3 {
-        font-size: rem(40);
-    }
-    h4 {
-        font-size: rem(36);
-    }
-    .signaling,
-    .complex-solutions,
-    .how-to-find,
-    .product-card__container,
-    .our-works {
-        padding-top: 150px;
-    }
-    .header {
-        &__nav {
-            font-size: rem(30);
-        }
-        &__time::before,
-        &__tel::before {
-            width: 22px;
-            height: 22px;
-        }
-    }
-    .form-header {
-        &__wrapp {
-            justify-content: center;
-        }
-    }
-    .signaling {
-        padding-top: 150px;
-    }
-    .complex-solutions {
-        &__card {
-            width: 32%;
-        }
-        &__subtitle {
-            font-size: rem(30);
-        }
-        &__text {
-            font-size: rem(30);
-        }
-        &__price {
-            font-size: rem(30);
-        }
-    }
-    .html-slider {
-        &__general-button {
-            width: 74px;
-            height: 74px;
-        }
-        &__button {
-            font-size: rem(30);
-        }
-    }
-    .footer {
-        font-size: rem(30);
-        &__tel::before,
-        &__time::before {
-            width: 22px;
-            height: 22px;
-        }
-    }
-
-}
-
-@media screen and (max-width: $mediaXL) {
-    .container {
-        width: $containerLG;
-    }
-    html {
-        font-size: 14px;
-    }
-    .signaling,
-    .complex-solutions,
-    .how-to-find,
-    .product-card__container,
-    .our-works {
-        padding-top: 120px;
-    }
-    .header {
-        &__logo {
-            width: 80%;
-        }
-        &__title {
-            margin-top: 120px;
-            margin-bottom: 60px;
-        }
-    }
-    .form-header {
-        margin-left: 30px;
-    }
-    .complex-solutions {
-        &__info {
-            min-height: 980px;
-        }
-        &__text {
-            font-size: rem(28);
-        }
-    }
-    .html-slider {
-        &__general-button {
-            width: 64px;
-            height: 64px;
-        }
-    }
-    .footer {
-        font-size: rem(28);
-    }
-}
 
 @media screen and (min-width: $mediaLG) {
     .html-slider {
@@ -156,10 +31,145 @@
         }
     }
 }
+@media screen and (max-width: $mediaXXL) {
+    .container {
+        width: $containerXL;
+    }
+    html {
+        font-size: 13px;
+    }
+    .modal-btn {
+        font-size: rem(35);
+    }
+    h1 {
+        font-size: rem(75);
+    }
+    h2 {
+        font-size: rem(75);
+    }
+    h3 {
+        font-size: rem(40);
+    }
+    h4 {
+        font-size: rem(36);
+    }
+    .signaling,
+    .complex-solutions,
+    .how-to-find,
+    .product-card__container,
+    .our-works {
+        padding-top: 130px;
+    }
+    .header {
+        &__nav {
+            font-size: rem(30);
+        }
+        &__time::before,
+        &__tel::before {
+            width: 22px;
+            height: 22px;
+        }
+    }
+    .signaling {
+        padding-top: 150px;
+    }
+    .complex-solutions {
+        &__card {
+            width: 32%;
+        }
+        &__subtitle {
+            font-size: rem(30);
+        }
+        &__text {
+            font-size: rem(28);
+        }
+        &__price {
+            font-size: rem(30);
+        }
+    }
+    .html-slider {
+        &__general-button {
+            width: 74px;
+            height: 74px;
+        }
+        &__button {
+            font-size: rem(30);
+        }
+    }
+    .certificates__title {
+        margin-bottom: 20px;
+    }
+    .footer {
+        font-size: rem(30);
+        &__tel::before,
+        &__time::before {
+            width: 22px;
+            height: 22px;
+        }
+    }
+
+}
+
+@media screen and (max-width: $mediaXL) {
+    .container {
+        width: $containerLG !important;
+    }
+    html {
+        font-size: 12px;
+    }
+    .signaling,
+    .complex-solutions,
+    .how-to-find,
+    .product-card__container,
+    .our-works {
+        padding-top: 120px;
+    }
+    .header {
+        &__logo {
+            width: 80%;
+        }
+        &__title {
+            margin-top: 120px;
+            margin-bottom: 60px;
+        }
+        &__address {
+            max-width: 300px;
+        }
+    }
+    .form-header {
+        margin-left: 30px;
+        &__wrapp {
+            flex-direction: column;
+        }
+        &__label {
+            max-width: 90%;
+        }
+    }
+    .complex-solutions {
+        &__info {
+            min-height: 980px;
+        }
+        &__text {
+            font-size: rem(28);
+        }
+    }
+    .html-slider {
+        &__general-button {
+            width: 64px;
+            height: 64px;
+        }
+    }
+    .footer {
+        font-size: rem(28);
+        &__address {
+            max-width: 260px;
+        }
+    }
+}
 
 @media screen and (max-width: $mediaLG) {
     .container {
-        width: $containerMD;
+        width: $containerMD !important;
     }
     .signaling,
     .complex-solutions,
@@ -174,6 +184,10 @@
         }
         &__nav {
             font-size: rem(25);
+        }
+        &__wrapp {
+            flex-wrap: wrap;
+            justify-content: center;
         }
         &__address {
             max-width: 220px;
@@ -211,6 +225,19 @@
     .signaling {
         &__card {
             width: 48%;
+            margin-top: 40px;
+        }
+        &__name {
+            font-size: rem(33);
+            margin-bottom: 30px;
+            &::before {
+                width: 80px;
+                height: 80px;
+                margin-bottom: 20px;
+            }
+        }
+        &__text {
+            font-size: rem(22);
         }
     }
     .html-slider {
@@ -233,7 +260,7 @@
 }
 
 @media screen and (max-width: $mediaMD) {
-    .container {
+    body .container {
         width: $containerSM !important;
     }
     html {
@@ -257,9 +284,6 @@
         &__time {
             margin-right: 0;
         }
-        &__wrapp {
-            flex-wrap: wrap;
-        }
         &__title {
             margin-top: 80px;
         }
@@ -274,9 +298,6 @@
     }
     .form-header {
         margin: 50px 0 0 0;
-        &__input {
-            max-width: 80%;
-        }
     }
     .signaling {
         &__title {
@@ -355,7 +376,7 @@
 }
 
 @media screen and (max-width: $mediaSM) {
-    .container {
+    body .container {
         width: $containerESM !important;
         padding: 0 15px;
     }
@@ -369,7 +390,7 @@
         font-size: rem(54);
     }
     h3 {
-        font-size: rem(40);
+        font-size: rem(37);
     }
     h4 {
         font-size: rem(36);
@@ -380,6 +401,21 @@
     .product-card__container,
     .our-works {
         padding-top: 60px;
+    }
+    .signaling {
+        &__title {
+            font-size: rem(45);
+        }
+    }
+    .complex-solutions {
+        &__title {
+            font-size: rem(45);
+        }
+    }
+    .product-card {
+        &__title {
+            font-size: rem(45);
+        }
     }
     .header {
         &__nav {
@@ -441,6 +477,9 @@
     .yandex__map {
         height: 80vw;
     }
+    .gsm-alarm {
+        padding-top: 60px;
+    }
     .footer {
         &__links,
         &__texts {
@@ -479,5 +518,12 @@
 
         top: 30%;
     
+    }
+    #cd {
+        transform: scale(0.7);
+        width: 450px;
+    }
+    .cntSeparator {
+        margin: 0 7px;
     }
 }

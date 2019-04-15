@@ -1,16 +1,16 @@
 .complex-solutions {
-    padding-top: 200px;
-    padding-bottom: 49vw;
+    padding-top: 120px;
+    padding-bottom: 35vw;
     position: relative;
     &__title {
         text-align: center;
-        margin-bottom: 105px;
+        margin-bottom: 50px;
     }
     &__cards {
         justify-content: space-between;
     }
     &__card {
-        max-width: 470px;
+        width: 32%;
         text-align: center;
     }
     &__info {
@@ -19,19 +19,19 @@
     }
     &__name {
         text-transform: uppercase;
-        padding: 35px 0;
+        padding: 25px 0;
         border: 3px solid $main-text-color;
     }
     &__subtitle {
         padding: 0 25px;
         font-family: $myriad-bold;
-        font-size: rem(36);
-        margin: 50px 0;
+        font-size: rem(25);
+        margin: 30px 0;
     }
     &__text {
         padding: 0 25px;
-        font-size: rem(36);
-        margin-bottom: 50px;
+        font-size: rem(22);
+        margin-bottom: 30px;
         text-align: left;
         &_line {
             letter-spacing: 0.01em;
@@ -40,20 +40,20 @@
     &__price {
         padding: 0 25px;
         font-family: $myriad-bold;
-        font-size: rem(36);
+        font-size: rem(25);
     }
     &__btn {
         margin: 40px auto 0;
     }
     &::after {
         content: '';
-        width: 100vw;
-        height: 47vw;
+        width: 70vw;
+        height: 34vw;
         background: url('../img/bmw.png') no-repeat center center;
         background-size: contain;
         display: block;
         position: absolute;
-        left: -30vw;
+        left: -20vw;
         bottom: 0;
     }
 }

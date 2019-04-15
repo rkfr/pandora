@@ -1,5 +1,5 @@
 .signaling {
-    padding-top: 200px;
+    padding-top: 120px;
     &__title {
         text-align: center;
     }
@@ -9,44 +9,48 @@
     }
     &__card {
         width: 30%;
-        margin-top: 68px;
-        font-size: rem(36);
+        margin-top: 60px;
+        font-size: rem(30);
         text-align: center;
     }
     &__name {
         text-transform: uppercase;
+        display: block;
         margin-bottom: 10px;
         &::before {
             content: '';
             display: block;
-            width: 121px;
-            height: 101px;
+            width: 101px;
+            height: 81px;
             margin: 0 auto 35px;
         }
         &_lock::before {
             background: url('../img/icon1.png') no-repeat center center;
-            background-size: cover;
+            background-size: contain;
         }
         &_search::before {
             background: url('../img/icon2.png') no-repeat center center;
-            background-size: cover;
+            background-size: contain;
         }
         &_immo::before {
             background: url('../img/icon3.png') no-repeat center center;
-            background-size: cover;
+            background-size: contain;
         }
         &_slave::before {
             background: url('../img/icon4.png') no-repeat center center;
-            background-size: cover;
+            background-size: contain;
         }
         &_gsm::before {
             background: url('../img/icon5.png') no-repeat center center;
-            background-size: cover;
+            background-size: contain;
         }
         &_automatic::before {
             background: url('../img/icon6.png') no-repeat center center;
-            background-size: cover;
+            background-size: contain;
         }
+    }
+    &__text {
+        font-size: rem(20);
     }
     &__btn {
         margin: 50px auto 0;

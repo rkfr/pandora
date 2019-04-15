@@ -1,11 +1,11 @@
 .footer {
     padding: 45px 0;
     background: $card-hover-color;
-    font-size: rem(36);
+    font-size: rem(18);
     text-transform: uppercase;
     justify-content: space-between;
     &__links {
-        margin-bottom: 50px;
+        margin-bottom: 20px;
     }
     &__tel {
         margin-right: 40px;
@@ -20,6 +20,9 @@
             margin-bottom: -2px;
             margin-right: 5px;
         }
+    }
+    &__address {
+        max-width: 480px;
     }
     &__time {
         margin-right: auto;
