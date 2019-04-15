@@ -30,6 +30,12 @@
             cursor: pointer;
         }
     }
+
+    .complex-solutions {
+        &:hover::after {
+            transform: translate(15vw, 5vh);
+        }
+    }
 }
 
 @media screen and (min-width: 1200px) {
