@@ -5,12 +5,12 @@
     }
 
     &__slider-container {
-        height: 680px;
+        height: 480px;
         position: relative;
     }
 
     &__slider-card {
-        height: 680px;
+        height: 480px;
 
         &:hover {
             background: none;
@@ -32,6 +32,6 @@
     }
 
     &__slider-wraper-button {
-        top: 250px ;
+        top: 200px ;
     }
 }

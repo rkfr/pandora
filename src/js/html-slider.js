@@ -76,7 +76,7 @@ class HtmlSlider {
 
     cardSizeHandler(windowWidth) {
         const {cardsToShow} = this.state;
-        this.state.oneCardSize = parseInt((windowWidth / cardsToShow) * 0.8);
+        this.state.oneCardSize = parseInt((windowWidth / cardsToShow) * 0.6);
     }
 
     sliderWidthHandler() {

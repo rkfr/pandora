@@ -31,6 +31,19 @@
         }
     }
 }
+
+@media screen and (min-width: 1200px) {
+    .certificates__slider-card {
+        &:first-child {
+            padding-right: 0;
+        }
+
+        &:last-child {
+            padding-left: 0;
+        }
+    }
+}
+
 @media screen and (max-width: $mediaXXL) {
     .container {
         width: $containerXL;
@@ -164,6 +177,10 @@
         &__address {
             max-width: 260px;
         }
+    }
+
+    .certificates__photo-container {
+         padding: 0 24%;
     }
 }
 
